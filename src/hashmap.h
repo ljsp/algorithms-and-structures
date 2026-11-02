@@ -2,11 +2,23 @@
 
 namespace nstd
 {
-    template <typename T, typename U>
+    template <typename KeyType, typename ValueType>
     struct hashmap 
     {
+    public:
+        hashmap() = default;
+
+        bool exist(const KeyType& key) {};
+        
+        void put(const KeyType& key, const ValueType value) {};
+        
+        ValueType& get(const KeyType& key) {};
+        
+        void remove(const KeyType& key) {};
+
+    private:
         static constexpr unsigned long long k_max_elements_size = (1 << 32) - 1;
-        T* m_keys;
-        U* m_values;
+        KeyType* m_keys;
+        ValueType* m_values;
     };
 }
