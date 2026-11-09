@@ -9,7 +9,7 @@ namespace nstd
         hashmap() = default;
 
         bool exist(const KeyType& key) {};
-        
+
         void put(const KeyType& key, const ValueType value) {};
         
         ValueType& get(const KeyType& key) {};
